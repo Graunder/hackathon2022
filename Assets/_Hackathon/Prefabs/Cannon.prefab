@@ -566,6 +566,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snapR: {fileID: 6670546839407072464}
   snapL: {fileID: 6272800012493171710}
+  projectile: {fileID: 0}
+  colorCombinations:
+  - {fileID: 2100000, guid: dfdfdaf247f29f44bbbb781132dde268, type: 2}
+  - {fileID: 2100000, guid: 715391ce2483c9d4ca06ad31f6d12ef3, type: 2}
+  - {fileID: 2100000, guid: 41d11a6cb69dcc247ae6ab8fb87faa2b, type: 2}
+  - {fileID: 2100000, guid: 66dec7f0cd4372940bda58d134d62851, type: 2}
+  - {fileID: 2100000, guid: 68a9bd1b130f0914a9bd2d3fa703d545, type: 2}
+  - {fileID: 2100000, guid: 9ca1d483089b59c45aecddbaeebbeb2d, type: 2}
+  - {fileID: 2100000, guid: d9dbf6f58aca59d4a8965835b09391f4, type: 2}
 --- !u!1 &1480679685616173402
 GameObject:
   m_ObjectHideFlags: 0

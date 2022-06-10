@@ -1,37 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3348200166407424120
+--- !u!1001 &3222828985772986487
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 308685461973348028, guid: 2e6d9530a01029547b8b3b5b0efbefce,
-        type: 3}
-      propertyPath: colorName
-      value: Yellow
-      objectReference: {fileID: 0}
-    - target: {fileID: 308685461973348028, guid: 2e6d9530a01029547b8b3b5b0efbefce,
-        type: 3}
-      propertyPath: canisterColor.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 308685461973348028, guid: 2e6d9530a01029547b8b3b5b0efbefce,
-        type: 3}
-      propertyPath: canisterColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 308685461973348028, guid: 2e6d9530a01029547b8b3b5b0efbefce,
-        type: 3}
-      propertyPath: canisterColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4363795682874439797, guid: 2e6d9530a01029547b8b3b5b0efbefce,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 66dec7f0cd4372940bda58d134d62851, type: 2}
     - target: {fileID: 9089199729258979504, guid: 2e6d9530a01029547b8b3b5b0efbefce,
         type: 3}
       propertyPath: m_RootOrder
@@ -40,17 +15,17 @@ PrefabInstance:
     - target: {fileID: 9089199729258979504, guid: 2e6d9530a01029547b8b3b5b0efbefce,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.1975881
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9089199729258979504, guid: 2e6d9530a01029547b8b3b5b0efbefce,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9089199729258979504, guid: 2e6d9530a01029547b8b3b5b0efbefce,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.2435222
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9089199729258979504, guid: 2e6d9530a01029547b8b3b5b0efbefce,
         type: 3}
@@ -90,7 +65,7 @@ PrefabInstance:
     - target: {fileID: 9089199729258979519, guid: 2e6d9530a01029547b8b3b5b0efbefce,
         type: 3}
       propertyPath: m_Name
-      value: Color_Canister_Yellow
+      value: Color_Canister
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e6d9530a01029547b8b3b5b0efbefce, type: 3}

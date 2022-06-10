@@ -12,6 +12,16 @@ PrefabInstance:
       propertyPath: colorName
       value: Red
       objectReference: {fileID: 0}
+    - target: {fileID: 308685461973348028, guid: 2e6d9530a01029547b8b3b5b0efbefce,
+        type: 3}
+      propertyPath: canisterColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 308685461973348028, guid: 2e6d9530a01029547b8b3b5b0efbefce,
+        type: 3}
+      propertyPath: canisterColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4363795682874439797, guid: 2e6d9530a01029547b8b3b5b0efbefce,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

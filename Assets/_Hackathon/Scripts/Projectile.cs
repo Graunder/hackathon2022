@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColorCanister : MonoBehaviour
+public class Projectile : MonoBehaviour
 {
-    public Color canisterColor;
+    public string projectileColorName;
 }
