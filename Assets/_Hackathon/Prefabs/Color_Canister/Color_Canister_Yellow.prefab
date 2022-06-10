@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 308685461973348028, guid: 2e6d9530a01029547b8b3b5b0efbefce,
+        type: 3}
+      propertyPath: colorName
+      value: Yellow
+      objectReference: {fileID: 0}
     - target: {fileID: 4363795682874439797, guid: 2e6d9530a01029547b8b3b5b0efbefce,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
