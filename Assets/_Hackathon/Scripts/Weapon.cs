@@ -12,11 +12,20 @@ public class Weapon : MonoBehaviour
     private SnapZone snapL;
     [SerializeField]
     private GameObject projectile;
+    [SerializeField]
+    private Transform projectileSpawnPos;
+    
     private Color projectileColor;
+    private float velocity = 700f;
 
     public void Shoot(){
         GetNewProjectile();
-        projectile.GetComponentInChildren<MeshRenderer>().material.color = projectileColor;
+        // projectile.GetComponentInChildren<MeshRenderer>().material.color = projectileColor;
+
+        GameObject newProjectile = Instantiate(projectile, projectileSpawnPos.position, Quaternion.identity);
+        newProjectile.GetComponentInChildren<MeshRenderer>().material.color = projectileColor;
+        newProjectile.GetComponent<Rigidbody>().AddForce(projectileSpawnPos.forward * velocity);
+        
     }
 
     private void GetNewProjectile(){
