@@ -5,9 +5,9 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     
-    [SerializeField] Color targetColor;
-    [SerializeField] Color targetColor2;
-    [SerializeField] private bool mix = false;
+    public Color targetColor;
+    public Color targetColor2;
+    public bool mix = false;
 
     private Color colorToCompare;
 
