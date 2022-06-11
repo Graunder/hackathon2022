@@ -10,15 +10,17 @@ public class Enemy : MonoBehaviour
     public bool mix = false;
 
     private Color colorToCompare;
+    [SerializeField]
+    private MeshRenderer rendr;
 
     private void Start() {
         // GetComponent<MeshRenderer>().material.color = targetColor;
         
         if(mix){
-            GetComponent<MeshRenderer>().material.color = Color.Lerp(targetColor, targetColor2, 0.5f);
+            rendr.material.color = Color.Lerp(targetColor, targetColor2, 0.5f);
             colorToCompare = Color.Lerp(targetColor, targetColor2, 0.5f);
         }else{
-            GetComponent<MeshRenderer>().material.color = targetColor;
+            rendr.material.color = targetColor;
             colorToCompare = targetColor;
         }
     }
