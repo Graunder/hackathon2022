@@ -13,13 +13,9 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private GameObject projectile;
     private Color projectileColor;
-    private Color colorWhite = Color.white;
-
-    public Material[] colorCombinations;
 
     public void Shoot(){
         GetNewProjectile();
-        // Debug.Log($"Shoot - Color: {snapR.HeldItem.GetComponent<ColorCanister>().canisterColor}");
         projectile.GetComponentInChildren<MeshRenderer>().material.color = projectileColor;
     }
 
@@ -55,22 +51,8 @@ public class Weapon : MonoBehaviour
             projectileColor = (Color)color1;
         }else{
             projectileColor = Color.white;
-            Debug.Log("Colors - none = white");
+            // Debug.Log("Colors - none = white");
         }
-
-        // switch(color1, color2){
-        //     // case ("", ""):
-        //     //     break;
-        //     case ("Blue", ""):
-        //         break;
-        //     case ("Red", ""):
-        //         break;
-        //     case ("Yellow", ""):
-        //         break;
-        //     default: 
-        //         projectileMaterial = colorCombinations[0];
-        //         break;
-        // }
     }
 
 }

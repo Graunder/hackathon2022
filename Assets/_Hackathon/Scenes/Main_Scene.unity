@@ -438,7 +438,6 @@ MonoBehaviour:
   snapR: {fileID: 0}
   snapL: {fileID: 0}
   projectile: {fileID: 0}
-  colorCombinations: []
 --- !u!4 &691896487 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6848174458288875768, guid: 0207d560c132cd74ba110109f62a9dfc,
