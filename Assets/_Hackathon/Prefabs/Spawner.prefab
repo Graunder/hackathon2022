@@ -45,7 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRate: 3
-  enemy: {fileID: 5153481205220808124, guid: 8beba701a940f32488b94c617e3bdccc, type: 3}
+  enemySpeed: 50
+  enemy: {fileID: 2329924182684138915, guid: 36dac230ed2628e40a68996879f70c15, type: 3}
   range: 4
   target: {fileID: 0}
-  startGame: 0
+  colors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0, g: 0.05882353, b: 1, a: 1}
+  - {r: 0, g: 1, b: 0, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}

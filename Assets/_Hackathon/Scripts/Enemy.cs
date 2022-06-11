@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
 
     private void Start() {
         // GetComponent<MeshRenderer>().material.color = targetColor;
+        
         if(mix){
             GetComponent<MeshRenderer>().material.color = Color.Lerp(targetColor, targetColor2, 0.5f);
             colorToCompare = Color.Lerp(targetColor, targetColor2, 0.5f);
@@ -31,5 +32,4 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
 }

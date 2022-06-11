@@ -15,13 +15,13 @@ public class Spawner : MonoBehaviour
     [SerializeField]
     private Transform target;
 
-    public bool startGame = false;
+    private bool startGame = true;
 
     [SerializeField]
     Color[] colors;
 
     // Update is called once per frame
-    void Update()
+    public void StartGame()
     {
         if(startGame){
             StartCoroutine(SpawningEnemies());
@@ -37,7 +37,7 @@ public class Spawner : MonoBehaviour
                 Quaternion.identity
             );
             newEnemy.GetComponent<Rigidbody>().AddForce(transform.forward * enemySpeed);
-
+            newEnemy.GetComponent<Enemy>().mix = Random.value < 0.5f;
             if(newEnemy.GetComponent<Enemy>().mix){
                 newEnemy.GetComponent<Enemy>().targetColor = colors[Random.Range(1, colors.Length)];
                 newEnemy.GetComponent<Enemy>().targetColor2 = colors[Random.Range(1, colors.Length)];
