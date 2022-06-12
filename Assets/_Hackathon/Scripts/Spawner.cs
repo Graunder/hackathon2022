@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Spawner : MonoBehaviour
 {
@@ -31,6 +32,13 @@ public class Spawner : MonoBehaviour
     private GameObject gameOverScreen;
     [SerializeField]
     private GameObject instructions;
+    [SerializeField]
+    private GameObject gameWinScreen;
+    [SerializeField]
+    private GameObject winParticle;
+    [SerializeField]
+    private GameObject lifeCanvas;
+    private bool hasWon = true;
 
     // Update is called once per frame
     public void StartGame()
@@ -38,6 +46,7 @@ public class Spawner : MonoBehaviour
         if(startGame){
             gameOverScreen.SetActive(false);
             instructions.SetActive(false);
+            gameWinScreen.SetActive(false);
             ResetScore();
             ResetLives();
             playing = true;
@@ -50,6 +59,14 @@ public class Spawner : MonoBehaviour
         if(totalLives == 0){
             StopGame();
             gameOverScreen.SetActive(true);
+            lifeCanvas.GetComponentInChildren<Image>().color = lifeCanvas.GetComponent<LifeCanvas>().originalColor;
+        }
+
+        if(totalScore >= 500 && hasWon){
+            hasWon = false;
+            StopGame();
+            Instantiate(winParticle, gameWinScreen.transform.position, Quaternion.identity);
+            gameWinScreen.SetActive(true);
         }
     }
 
@@ -68,6 +85,7 @@ public class Spawner : MonoBehaviour
 
     public void ResetScore(){
         totalScore = 0;
+        hasWon = true;
         scoreText.SetText(totalScore.ToString());
     }
 

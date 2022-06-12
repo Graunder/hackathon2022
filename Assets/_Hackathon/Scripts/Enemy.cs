@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -16,9 +17,14 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private GameObject particles;
     private GameObject spawner;
+    private GameObject lifeCanvas;
+    
 
     private void Start() {
         // GetComponent<MeshRenderer>().material.color = targetColor;
+        lifeCanvas = GameObject.Find("LifeCanvas");
+        // originalColor = lifeCanvas.GetComponentInChildren<Image>().color;
+
         spawner = GameObject.Find("Spawner");
         if(mix){
             Color newColor = Color.Lerp(targetColor, targetColor2, 0.5f);
@@ -42,5 +48,19 @@ public class Enemy : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
+
+        if(other.gameObject.CompareTag("Projectile") &&
+            other.gameObject.GetComponentInChildren<MeshRenderer>().material.color != colorToCompare &&
+            !other.gameObject.GetComponent<Projectile>().hasHit){
+                other.gameObject.GetComponent<Projectile>().hasHit = true;
+                StartCoroutine(BlinkLivesCounter());
+                spawner.GetComponent<Spawner>().UpdateLives();
+        }
+    }
+
+    IEnumerator BlinkLivesCounter(){
+        lifeCanvas.GetComponentInChildren<Image>().color = Color.red;
+        yield return new WaitForSeconds(1f);
+        lifeCanvas.GetComponentInChildren<Image>().color = lifeCanvas.GetComponent<LifeCanvas>().originalColor;
     }
 }
