@@ -29,12 +29,15 @@ public class Spawner : MonoBehaviour
     private TextMeshProUGUI livesText;
     [SerializeField]
     private GameObject gameOverScreen;
+    [SerializeField]
+    private GameObject instructions;
 
     // Update is called once per frame
     public void StartGame()
     {
         if(startGame){
             gameOverScreen.SetActive(false);
+            instructions.SetActive(false);
             ResetScore();
             ResetLives();
             playing = true;

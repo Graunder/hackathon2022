@@ -60,3 +60,4 @@ MonoBehaviour:
   scoreText: {fileID: 0}
   livesText: {fileID: 0}
   gameOverScreen: {fileID: 0}
+  instructions: {fileID: 0}
