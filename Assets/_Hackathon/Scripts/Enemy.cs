@@ -12,6 +12,8 @@ public class Enemy : MonoBehaviour
     private Color colorToCompare;
     [SerializeField]
     private MeshRenderer rendr;
+    [SerializeField]
+    private GameObject particles;
 
     private void Start() {
         // GetComponent<MeshRenderer>().material.color = targetColor;
@@ -33,6 +35,7 @@ public class Enemy : MonoBehaviour
         // Debug.Log($"OnCollisionEnter - Colors other: {other.gameObject.GetComponentInChildren<MeshRenderer>().material.color}");
         // Debug.Log($"OnCollisionEnter - Colors target color: {targetColor}");
         if(other.gameObject.CompareTag("Projectile") && other.gameObject.GetComponentInChildren<MeshRenderer>().material.color == colorToCompare){
+            Instantiate(particles, other.transform.position, Quaternion.identity);
             Destroy(other.gameObject);
             Destroy(gameObject);
         }

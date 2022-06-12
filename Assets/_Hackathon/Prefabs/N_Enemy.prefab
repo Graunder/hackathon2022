@@ -119,6 +119,8 @@ MonoBehaviour:
   targetColor2: {r: 0, g: 0.05882353, b: 1, a: 1}
   mix: 0
   rendr: {fileID: 3955545307190289710}
+  particles: {fileID: 3302442364004722511, guid: 10434d6bf3af98b46a88ab696f543ee3,
+    type: 3}
 --- !u!64 &8619660039136354193
 MeshCollider:
   m_ObjectHideFlags: 0
