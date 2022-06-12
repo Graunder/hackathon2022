@@ -44,15 +44,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2577cbadf9dd14e8969d6f25538218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 4
+  spawnRate: 3
   enemySpeed: 50
   enemy: {fileID: 1003907917948851985, guid: 14ae341d999ad64438c284e7949ade66, type: 3}
   range: 4
   target: {fileID: 0}
+  playing: 1
   colors:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0, g: 0.05882353, b: 1, a: 1}
   - {r: 0, g: 1, b: 0, a: 1}
   - {r: 1, g: 0, b: 0, a: 1}
-  totalScore: 10
+  totalScore: 0
+  totalLives: 10
   scoreText: {fileID: 0}
+  livesText: {fileID: 0}
+  gameOverScreen: {fileID: 0}

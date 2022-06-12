@@ -22,17 +22,31 @@ public class Spawner : MonoBehaviour
     [SerializeField]
     Color[] colors;
     public int totalScore;
+    public int totalLives;
     [SerializeField]
     private TextMeshProUGUI scoreText;
+    [SerializeField]
+    private TextMeshProUGUI livesText;
+    [SerializeField]
+    private GameObject gameOverScreen;
 
     // Update is called once per frame
     public void StartGame()
     {
         if(startGame){
+            gameOverScreen.SetActive(false);
             ResetScore();
+            ResetLives();
             playing = true;
             StartCoroutine(SpawningEnemies());
             startGame = false;
+        }
+    }
+
+    private void FixedUpdate() {
+        if(totalLives == 0){
+            StopGame();
+            gameOverScreen.SetActive(true);
         }
     }
 
@@ -53,10 +67,20 @@ public class Spawner : MonoBehaviour
         totalScore = 0;
         scoreText.SetText(totalScore.ToString());
     }
+
+    public void ResetLives(){
+        totalLives = 10;
+        livesText.SetText(totalLives.ToString());
+    }
     
     public void UpdateScore(){
         totalScore += 10;
         scoreText.SetText(totalScore.ToString());
+    }
+
+    public void UpdateLives(){
+        totalLives--;
+        livesText.SetText(totalLives.ToString());
     }
     
     IEnumerator SpawningEnemies(){
