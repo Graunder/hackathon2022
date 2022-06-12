@@ -24,6 +24,7 @@ public class Weapon : MonoBehaviour
 
         GameObject newProjectile = Instantiate(projectile, projectileSpawnPos.position, Quaternion.identity);
         newProjectile.GetComponentInChildren<MeshRenderer>().material.color = projectileColor;
+        newProjectile.GetComponentInChildren<MeshRenderer>().material.SetColor("_EmissionColor", projectileColor);
         newProjectile.GetComponent<Rigidbody>().AddForce(projectileSpawnPos.forward * velocity);
         
     }

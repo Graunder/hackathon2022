@@ -17,10 +17,13 @@ public class Enemy : MonoBehaviour
         // GetComponent<MeshRenderer>().material.color = targetColor;
         
         if(mix){
-            rendr.material.color = Color.Lerp(targetColor, targetColor2, 0.5f);
-            colorToCompare = Color.Lerp(targetColor, targetColor2, 0.5f);
+            Color newColor = Color.Lerp(targetColor, targetColor2, 0.5f);
+            rendr.material.color = newColor;
+            rendr.material.SetColor("_EmissionColor", newColor);
+            colorToCompare = newColor;
         }else{
             rendr.material.color = targetColor;
+            rendr.material.SetColor("_EmissionColor", targetColor);
             colorToCompare = targetColor;
         }
     }

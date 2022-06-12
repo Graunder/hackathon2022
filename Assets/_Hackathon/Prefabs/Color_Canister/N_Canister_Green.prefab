@@ -7,10 +7,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1567205167069153772, guid: 38dc05215d8fa9146b49fcd76eff47f1,
+        type: 3}
+      propertyPath: canisterColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1567205167069153772, guid: 38dc05215d8fa9146b49fcd76eff47f1,
+        type: 3}
+      propertyPath: canisterColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152348618985392265, guid: 38dc05215d8fa9146b49fcd76eff47f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 68a9bd1b130f0914a9bd2d3fa703d545, type: 2}
     - target: {fileID: 4179353127484634550, guid: 38dc05215d8fa9146b49fcd76eff47f1,
         type: 3}
       propertyPath: m_Name
-      value: N_Canister
+      value: N_Canister_Green
       objectReference: {fileID: 0}
     - target: {fileID: 7132261334267107317, guid: 38dc05215d8fa9146b49fcd76eff47f1,
         type: 3}
@@ -20,17 +35,17 @@ PrefabInstance:
     - target: {fileID: 7132261334267107317, guid: 38dc05215d8fa9146b49fcd76eff47f1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.6536762
       objectReference: {fileID: 0}
     - target: {fileID: 7132261334267107317, guid: 38dc05215d8fa9146b49fcd76eff47f1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.99675715
       objectReference: {fileID: 0}
     - target: {fileID: 7132261334267107317, guid: 38dc05215d8fa9146b49fcd76eff47f1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 2.1915221
       objectReference: {fileID: 0}
     - target: {fileID: 7132261334267107317, guid: 38dc05215d8fa9146b49fcd76eff47f1,
         type: 3}

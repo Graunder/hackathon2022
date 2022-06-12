@@ -34,10 +34,13 @@ public class ColorIndicator : MonoBehaviour
     private void ChangeIndicatorColor(Color? color1 = null, Color? color2 = null){
         if(color1 != null && color2 != null){
             meshRend.material.color = Color.Lerp((Color)color1, (Color)color2, 0.5f);
+            meshRend.material.SetColor("_EmissionColor", Color.Lerp((Color)color1, (Color)color2, 0.5f));
         }else if(color1 != null){
             meshRend.material.color = (Color)color1;
+            meshRend.material.SetColor("_EmissionColor", (Color)color1);
         }else{
             meshRend.material.color = Color.white;
+            meshRend.material.SetColor("_EmissionColor", Color.white);
         }
     }
     
