@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Enemy : MonoBehaviour
 {
@@ -14,10 +15,11 @@ public class Enemy : MonoBehaviour
     private MeshRenderer rendr;
     [SerializeField]
     private GameObject particles;
+    private GameObject spawner;
 
     private void Start() {
         // GetComponent<MeshRenderer>().material.color = targetColor;
-        
+        spawner = GameObject.Find("Spawner");
         if(mix){
             Color newColor = Color.Lerp(targetColor, targetColor2, 0.5f);
             rendr.material.color = newColor;
@@ -36,6 +38,7 @@ public class Enemy : MonoBehaviour
         // Debug.Log($"OnCollisionEnter - Colors target color: {targetColor}");
         if(other.gameObject.CompareTag("Projectile") && other.gameObject.GetComponentInChildren<MeshRenderer>().material.color == colorToCompare){
             Instantiate(particles, other.transform.position, Quaternion.identity);
+            spawner.GetComponent<Spawner>().UpdateScore();
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
